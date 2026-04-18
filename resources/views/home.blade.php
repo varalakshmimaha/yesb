@@ -323,7 +323,9 @@
     /* ===== FOOTER ===== */
     footer{background:#060f1e;color:rgba(255,255,255,.65);padding:70px 40px 0}
     .footer-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.08)}
-    .foot-brand .foot-logo{font-family:'Playfair Display',serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:14px}
+    .foot-brand .foot-logo{display:flex;align-items:center;gap:12px;font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:14px}
+    .foot-brand .foot-logo img{width:48px;height:48px;object-fit:contain;border-radius:10px;background:transparent}
+    .foot-brand .foot-logo svg{width:42px;height:42px;border-radius:10px}
     .foot-brand .foot-tagline{font-size:13.5px;line-height:1.8;margin-bottom:20px}
     .foot-brand .social-links{display:flex;gap:10px}
     .social-links a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:15px;transition:var(--transition)}
@@ -827,7 +829,19 @@
 <footer id="footer">
   <div class="footer-top">
     <div class="foot-brand">
-      <div class="foot-logo">Yesb Confident</div>
+      <div class="foot-logo">
+        @if(!empty($settings['logo_path']))
+          <img src="{{ asset('storage/' . $settings['logo_path']) }}" alt="Yesb Confident">
+        @else
+          <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="46" height="46" rx="12" fill="#0A2342"/>
+            <path d="M8 33 L16 13 L23 28 L30 13 L38 33" stroke="#E8A020" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="23" cy="12" r="3" fill="#E8A020"/>
+            <path d="M13 36 L33 36" stroke="#E8A020" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+          </svg>
+        @endif
+        <span>Yesb Confident</span>
+      </div>
       <div class="foot-tagline">Your trusted partner for online shopping and full-spectrum digital & traditional advertising services across India.</div>
       <div class="social-links">
         @if(!empty($settings['facebook_url']))<a href="{{ $settings['facebook_url'] }}" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>@endif
