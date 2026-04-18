@@ -55,7 +55,8 @@
     .navbar{background:var(--white);padding:0 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1000;height:72px;border-bottom:2px solid var(--accent);transition:var(--transition)}
     .navbar.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.1);height:64px}
     .logo{display:flex;align-items:center;gap:12px}
-    .logo-mark{width:46px;height:46px;border-radius:12px;overflow:hidden;flex-shrink:0;box-shadow:0 4px 14px rgba(10,35,66,.15)}
+    .logo-mark{width:54px;height:54px;border-radius:12px;overflow:hidden;flex-shrink:0}
+    .logo-mark.has-svg{box-shadow:0 4px 14px rgba(10,35,66,.15)}
     .logo-mark svg{width:100%;height:100%}
     .logo-text{font-family:'Playfair Display',serif;font-size:20px;font-weight:800;color:var(--primary);line-height:1.15}
     .logo-text em{font-style:normal;color:var(--accent)}
@@ -396,9 +397,9 @@
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar" id="navbar">
   <div class="logo">
-    <div class="logo-mark">
+    <div class="logo-mark {{ empty($settings['logo_path']) ? 'has-svg' : '' }}">
       @if(!empty($settings['logo_path']))
-        <img src="{{ asset('storage/' . $settings['logo_path']) }}" alt="Logo" style="width:100%;height:100%;object-fit:contain;background:#0A2342;padding:4px">
+        <img src="{{ asset('storage/' . $settings['logo_path']) }}" alt="Logo" style="width:100%;height:100%;object-fit:contain;background:transparent">
       @else
         <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="46" height="46" rx="12" fill="#0A2342"/>
