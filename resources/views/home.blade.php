@@ -613,7 +613,7 @@
   <div class="youth-section">
     <div class="youth-grid reveal">
       <div class="youth-img-side">
-        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=700&q=80" alt="Youth Empowerment">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&q=80" alt="Young team working in e-commerce">
       </div>
       <div class="youth-text-side">
         <div class="section-label" style="justify-content:flex-start">Our Initiative</div>
