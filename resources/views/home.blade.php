@@ -691,25 +691,6 @@
 </div>
 
 <!-- ========================================================
-     4. LIMITED TIME OFFER — Summer Sale
-     ======================================================== -->
-<div style="padding:0 0 80px">
-  <div class="promo-split reveal">
-    <div class="promo-split-inner">
-      <div class="promo-img">
-        <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=800&q=80" alt="Special Offer">
-      </div>
-      <div class="promo-text">
-        <div class="promo-label"><i class="fas fa-bolt"></i> Limited Time Offer</div>
-        <h2>Summer Sale is<br>Here! Up to <span style="color:var(--accent)">60% Off</span></h2>
-        <p>Don't miss out on our biggest sale of the season. Premium electronics, fashion, home essentials — all at unbeatable prices. Free delivery on all orders above &#8377;499.</p>
-        <button class="btn-promo" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})"><i class="fas fa-arrow-right"></i> Shop the Sale</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ========================================================
      5. ADVERTISING SERVICES — Redesigned Professional
      ======================================================== -->
 <div class="adv-section-v2" id="advertising">
